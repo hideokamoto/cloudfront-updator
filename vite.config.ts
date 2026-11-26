@@ -17,7 +17,7 @@ export default defineConfig({
       },
     },
     sourcemap: true,
-    minify: "esbuild",
+    minify: "oxc",
   },
   plugins: [
     dts({

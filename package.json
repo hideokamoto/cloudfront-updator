@@ -13,7 +13,9 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": ">=18.0.0"
   },
@@ -30,7 +32,13 @@
     "prepublishOnly": "npm run format && npm run lint && npm run typecheck && npm run test && npm run build",
     "release": "np"
   },
-  "keywords": ["aws", "cloudfront", "aws-sdk-v3", "distribution", "cdn"],
+  "keywords": [
+    "aws",
+    "cloudfront",
+    "aws-sdk-v3",
+    "distribution",
+    "cdn"
+  ],
   "bugs": {
     "url": "https://github.com/hideokamoto/cloudfront-updator/issues"
   },
@@ -49,17 +57,18 @@
     "p-limit": "^6.1.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "@types/node": "^22.9.3",
-    "@vitest/coverage-v8": "^4.0.9",
-    "np": "^10.2.0",
-    "semantic-release": "^25.0.2",
-    "typescript": "^5.7.2",
-    "vite": "^7.2.2",
-    "vite-plugin-dts": "^4.3.0",
-    "vitest": "^4.0.9"
+    "@biomejs/biome": "^2.6.8",
+    "@semantic-release/changelog": "^7.0.0",
+    "@semantic-release/git": "^11.0.1",
+    "@types/node": "^26.6.6",
+    "@typescript/typescript6": "^6.0.2",
+    "@vitest/coverage-v8": "^5.1.1",
+    "np": "^12.1.1",
+    "semantic-release": "^26.0.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vite-plugin-dts": "^5.1.2",
+    "vitest": "^5.1.1"
   },
   "overrides": {
     "tmp": "^0.2.5"
