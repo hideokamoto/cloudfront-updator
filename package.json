@@ -32,11 +32,11 @@
   },
   "keywords": ["aws", "cloudfront", "aws-sdk-v3", "distribution", "cdn"],
   "bugs": {
-    "url": "https://github.com/wpkyoto/cloudfront-updator/issues"
+    "url": "https://github.com/hideokamoto/cloudfront-updator/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wpkyoto/cloudfront-updator.git"
+    "url": "https://github.com/hideokamoto/cloudfront-updator.git"
   },
   "author": "Hidetaka Okamoto <info@wp-kyoto.net> (https://wp-kyoto.net)",
   "license": "MIT",
