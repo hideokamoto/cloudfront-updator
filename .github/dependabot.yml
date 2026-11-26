@@ -6,15 +6,22 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 10
+    # 同じ依存が複数のグループに当てはまるときは、上に書いたグループに入る。
     groups:
       aws-sdk:
         patterns:
           - "@aws-sdk/*"
-      dev-dependencies:
-        dependency-type: development
+      # 実行時依存はマイナー・パッチだけまとめる。メジャー（例: p-limit 7 は engines が
+      # node >=20 で、package.json の node >=18 と合わない）は判断が要るので個別の PR のまま
+      dependencies:
+        dependency-type: production
         update-types:
           - minor
           - patch
+      # 開発用依存はメジャーも含めてまとめる（2026-11 の手動まとめ #135 では
+      # biome 2・@types/node のメジャーも一緒に入れていた）
+      dev-dependencies:
+        dependency-type: development
 
   # Enable version updates for GitHub Actions
   - package-ecosystem: github-actions
@@ -22,3 +29,7 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    groups:
+      github-actions:
+        patterns:
+          - "*"
