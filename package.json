@@ -8,9 +8,14 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     }
   },
   "files": [
@@ -25,7 +30,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "build": "vite build && tsc --emitDeclarationOnly --outDir dist",
+    "build": "vite build && tsc --emitDeclarationOnly --outDir dist && node -e \"require('fs').copyFileSync('dist/index.d.ts', 'dist/index.d.cts')\"",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
     "format": "biome format --write .",
@@ -43,6 +48,7 @@
   "bugs": {
     "url": "https://github.com/hideokamoto/cloudfront-updator/issues"
   },
+  "homepage": "https://github.com/hideokamoto/cloudfront-updator#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/hideokamoto/cloudfront-updator.git"
