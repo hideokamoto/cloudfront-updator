@@ -228,23 +228,25 @@ interface DiffResult {
 
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Run tests
-npm test
+pnpm test
 
 # Run tests in watch mode
-npm run dev
+pnpm run dev
 
 # Build
-npm run build
+pnpm run build
 
 # Lint
-npm run lint
+pnpm run lint
 
 # Format code
-npm run format
+pnpm run format
 ```
+
+Releases are published from CircleCI with semantic-release and npm Trusted Publishing when commits land on `main`. Use Conventional Commits (`feat:`, `fix:`) so the next version is picked correctly.
 
 ## Contributing
 
